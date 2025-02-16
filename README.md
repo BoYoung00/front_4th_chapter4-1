@@ -18,7 +18,7 @@ GitHub Actions에 워크플로우를 작성해 다음과 같이 배포가 진행
 ## 주요 링크
 
 - S3 버킷 웹사이트 엔드포인트: http://next-mock.s3-website-ap-southeast-2.amazonaws.com
-- CloudFrount 배포 도메인 이름: d19w432qnfaf3w.cloudfront.net
+- CloudFrount 배포 도메인 이름: [d19w432qnfaf3w.cloudfront.net](https://d19w432qnfaf3w.cloudfront.net)
 
 ## 주요 개념
 
