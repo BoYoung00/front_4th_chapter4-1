@@ -1,7 +1,8 @@
 # 프론트엔드 배포 파이프라인
 
 ## 개요
-![Untitled](https://github.com/user-attachments/assets/eaaef69b-0552-41e2-8614-ee3043c9885e)
+<img src="https://github.com/user-attachments/assets/9a97cdb3-d035-424b-ae7e-4e4ea15a2ed9" width="700" />
+
 
 
 GitHub Actions에 워크플로우를 작성해 다음과 같이 배포가 진행되도록 합니다.
