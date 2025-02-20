@@ -71,9 +71,4 @@ Settings → Secrets and variables → Actions에서 설정하며, .env 파일 �
 ---
 
 ## 4. 분석 및 결론
-
-### 4.1 주요 개선 사항
-- **TTFB(Time To First Byte) 개선**: AWS CloudFront는 **Edge Location**을 활용하여, 사용자와 물리적으로 가까운 서버에서 빠르게 응답을 제공하여 TTFB를 크게 단축시켰습니다. CDN 도입 후, TTFB가 75% 개선되었습니다.
-  
-### 4.2 결론
-AWS CloudFront CDN을 적용한 결과, **TTFB**가 75% 단축되었습니다. TTFB 개선은 전체 페이지 로딩 속도 향상에 큰 영향을 미치므로, CDN을 도입하는 것이 웹사이트 성능 최적화에 중요한 요소임을 알 수 있습니다.
+- **TTFB(Time To First Byte) 개선**: AWS CloudFront는 **Edge Location**을 활용하여, 사용자와 물리적으로 가까운 서버에서 빠르게 응답을 제공함으로써 TTFB를 **75% 단축**시켰습니다. TTFB 개선은 전체 페이지 로딩 속도 향상에 큰 영향을 미치므로, CDN 도입이 웹사이트 성능 최적화에 중요한 요소임을 확인할 수 있었습니다.
