@@ -45,3 +45,35 @@ CloudFront는 성능을 위해 파일을 캐시하지만, 새로운 배포 이�
 GitHub Actions에서 AWS 키, API 토큰 같은 민감한 정보를 보호하기 위해 사용하는 보안 변수이다.
 Settings → Secrets and variables → Actions에서 설정하며, .env 파일 대신 GitHub Secrets에 저장하여 보안성을 높인다.
 예를 들어, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY 같은 값들은 코드에서 직접 노출되지 않고 ${{ secrets.AWS_ACCESS_KEY_ID }} 같은 형태로 사용된다.
+
+## CDN과 성능최적화
+
+## 1. 개요
+본 보고서는 AWS CloudFront CDN 도입 전후의 **TTFB(Time To First Byte)** 개선 효과를 분석하는 것을 목표로 합니다. **TTFB**는 사용자가 요청한 페이지의 첫 번째 바이트가 서버에서 전달되는 데 걸리는 시간을 나타내며, 웹사이트의 반응 속도를 측정하는 중요한 지표입니다.
+
+---
+
+## 2. 테스트 환경
+- **테스트 도구**: Chrome DevTools
+- **측정 방법**: 동일한 네트워크 환경에서 5회 테스트 후 평균값을 산출
+- **테스트 지역**: 서울 (한국)
+
+---
+
+## 3. TTFB 개선 결과
+
+### 3.1 주요 TTFB 비교
+
+| 지역  | CDN 미적용 TTFB (ms) | CDN 적용 후 TTFB (ms) | 개선율 |
+|-------|----------------------|-----------------------|-------|
+| 서울  | 164.23ms             | 14.9ms                 | **75% 감소** |
+
+---
+
+## 4. 분석 및 결론
+
+### 4.1 주요 개선 사항
+- **TTFB(Time To First Byte) 개선**: AWS CloudFront는 **Edge Location**을 활용하여, 사용자와 물리적으로 가까운 서버에서 빠르게 응답을 제공하여 TTFB를 크게 단축시켰습니다. CDN 도입 후, TTFB가 75% 개선되었습니다.
+  
+### 4.2 결론
+AWS CloudFront CDN을 적용한 결과, **TTFB**가 75% 단축되었습니다. TTFB 개선은 전체 페이지 로딩 속도 향상에 큰 영향을 미치므로, CDN을 도입하는 것이 웹사이트 성능 최적화에 중요한 요소임을 알 수 있습니다.
